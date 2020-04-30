@@ -10,7 +10,7 @@ def requisicao():
 
     try:
 
-        req = requests.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=b41df06c05b106979366f7c7978fbfe8d6fd533b' )
+        req = requests.get('https://api.codenation.dev/v1/challenge/dev-ps/generate-data?token=' )
 
         desafio = req.json()
 
@@ -69,7 +69,7 @@ with open('answer.json', 'wt', encoding='utf-8') as file:
 
     file.write(json.dumps(desafio, indent=4))
 
-site = 'https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token=b41df06c05b106979366f7c7978fbfe8d6fd533b'
+site = 'https://api.codenation.dev/v1/challenge/dev-ps/submit-solution?token='
 
 filename = 'answer.json'
 
